@@ -21,6 +21,10 @@ button, input, textarea {
     appearance: none;
 }
 
+.root-box {
+    overflow-y: auto;
+}
+
 .form-item {
     margin-top: 20px;
 }
