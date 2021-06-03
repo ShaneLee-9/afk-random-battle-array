@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes"/>
+    <meta content=yes name=apple-mobile-web-app-capable/>
+    <meta content=yes name=apple-touch-fullscreen/>
+    <meta content="telephone=no,email=no" name=format-detection/>
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>AFK Random</title>
+    <link rel="stylesheet" href="rpgui/rpgui.min.css">
+    <link rel="stylesheet" href="base.css">
+    <script src="rpgui/rpgui.min.js"></script>
+  </head>
+
+  <body ontouchstart="">
+    <div class="rpgui-content rpgui-container framed">
+      <div class="form-item">
+        <label for="heroes">Heroes：</label>
+        <input id="heroes" name="heroes" type="number">
+      </div>
+
+      <div class="form-item">
+        <label for="friends">Friends：</label>
+        <input id="friends" name="friends" type="number">
+        <input class="rpgui-checkbox" id="can" type="checkbox" data-rpguitype="checkbox"><label>Can
+      </label>
+      </div>
+
+      <div class="form-item">
+        <label for="essential">Essential：</label>
+        <input id="essential" name="essential" type="text">
+        <p class="error-text" id="essentialError"></p>
+      </div>
+
+      <button class="rpgui-button submit-btn" type="button" onclick="handleSubmit()">
+        <span>Confirm</span>
+      </button>
+
+      <footer class="rpgui-container framed-golden-2 footer">
+        <div class="result"></div>
+        <div class="count"></div>
+        <div class="reset-count">
+          <button class="rpgui-button" type="button" onclick="resetCount()">
+            <span>Reset Count</span>
+          </button>
+        </div>
+      </footer>
+    </div>
+  </body>
+
+  <script src="//cdn.jsdelivr.net/npm/animejs"></script>
+  <script src="lodash.min.js"></script>
+  <script src="base.js"></script>
+  <script src="index.js"></script>
+</html>

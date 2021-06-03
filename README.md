@@ -1,0 +1,1 @@
+## AFK Random Battle Array

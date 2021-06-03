@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', cursive;
+}
+
+@font-face {
+    font-family: 'Press Start 2P', cursive;
+    src: url("Press Start 2P.ttf");
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: #4e4a4e;
+}
+
+button, input, textarea {
+    touch-action: none;
+}
+
+.form-item {
+    margin-top: 20px;
+}
+
+.form-item input {
+    margin-top: 10px;
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.error-text {
+    display: none;
+    margin-top: 5px;
+    color: #c50320 !important;
+    opacity: 0;
+}
+
+.error-text.show {
+    display: block;
+    animation: fadeIn .3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.footer {
+    position: static;
+    display: none;
+    margin-top: 20px;
+}
+
+.result {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.reset-count,
+.count {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.count {
+    color: #fff !important;
+}
