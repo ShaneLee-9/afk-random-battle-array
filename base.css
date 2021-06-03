@@ -17,6 +17,8 @@ body {
 
 button, input, textarea {
     touch-action: none;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 .form-item {
