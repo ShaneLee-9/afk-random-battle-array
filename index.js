@@ -127,12 +127,16 @@ function handleSubmit() {
   const allHeroes = _.compact([friend, ...heroList])
 
   if (essentialList.length) {
-    // 去除与必要数组对应的元素
-    const trimArr = _.difference(allHeroes, essentialList)
-    // 从整理后的数组随机获取一个集合
-    const sampleList = _.sampleSize(trimArr, TOTAL - essentialList.length)
+    if (essentialList.length > 4) {
+      result = _.shuffle(essentialList).slice(0, 5)
+    } else {
+      // 去除与必要数组对应的元素
+      const trimArr = _.difference(allHeroes, essentialList)
+      // 从整理后的数组随机获取一个集合
+      const sampleList = _.sampleSize(trimArr, TOTAL - essentialList.length)
 
-    result = _.shuffle([...sampleList, ...essentialList])
+      result = _.shuffle([...sampleList, ...essentialList])
+    }
   } else {
     result = _.sampleSize(allHeroes, TOTAL)
   }
